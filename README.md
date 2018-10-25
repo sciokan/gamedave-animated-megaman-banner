@@ -1,5 +1,5 @@
 # gamedave-animated-megaman-banner
-An animated CSS banner.
+A Megaman inspired CSS banner.
 
 Check out the banner in action!
 
