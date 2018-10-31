@@ -1,0 +1,121 @@
+body { 
+  position: absolute;
+  height: 100%; 
+  width: 100%; 
+  margin: 0px;
+  background-color: #000000;
+  background-image: url('images/megaman-stars-500.png'), url('images/megaman-stars-400.png'), url('images/megaman-stars-300.png');
+  -webkit-animation: starfield 5s linear infinite;
+  -moz-animation: starfield 5s linear infinite;
+  -ms-animation: starfield 5s linear infinite;
+  animation: starfield 5s linear infinite;
+}
+
+#banner {
+  position: absolute;
+  height: 220px;
+  width: 100%;
+  top: calc(50% - 125px);
+  background-color: #000066;
+  border-top: 16px solid transparent; 
+  border-bottom: 16px solid transparent; 
+  border-image: url(images/megaman-border.png) 16 round;
+}
+
+#dave {
+  position: absolute;
+  top: 0px;
+  left: calc(50% - 66px);
+  height: 132px;
+  width:  132px;
+  background-image: url(images/megaman-gamedave-spritesheet.png);
+  -webkit-animation: dave 7s linear infinite;
+  -moz-animation: dave 7s linear infinite;
+  -ms-animation: dave 7s linear infinite;
+  animation: dave 7s linear infinite;
+}	
+
+#name {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 170px);
+  height: 32px;
+  width: 300px;
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 4px 4px 0px #000000;
+}
+#name-overlay {
+  position: absolute;
+  bottom: 35px;
+  left: calc(50% - 170px);
+  height: 40px;
+  width: 300px;
+  background-color: #000066;
+  -webkit-animation: namereveal 7s linear infinite;
+  -moz-animation: namereveal 7s linear infinite;
+  -ms-animation: namereveal 7s linear infinite;
+  animation: namereveal 7s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes dave {
+  /* Falling */
+  0% {
+    top: -132px;
+    background-position: 0px 0px;
+  }
+
+  /* Falling */
+  10% {
+    top: calc(50% - 100px);
+    background-position: 0px 0px;
+  }
+
+  /* Faceplant */
+  10.001% {
+    background-position: -132px 0px;
+  }
+
+  /* Getting Up */
+  35% { background-position: -132px 0px; }
+  35.001% { background-position: -264px 0px; }
+
+  /* Looking Right */
+  40% { background-position: -264px 0px; }
+  40.001% { background-position: -396px 0px; }
+
+  /* Looking Left */
+  55% { background-position: -396px 0px; }
+  55.001% { background-position: -792px 0px; }
+
+  /* Looking Right */
+  60% { background-position: -792px 0px; }
+  60.001% { background-position: -660px 0px; }
+
+  /* Kneel */
+  70% { background-position: -660px 0px; }
+  70.001% { background-position: -924px 0px; }
+
+  /* POSE! */
+  80% { background-position: -924px 0px; }
+  80.001% { background-position: -1056px 0px; }
+
+  100% {
+    top: calc(50% - 100px);
+    background-position: -1056px 0px;
+  }
+}
+
+@keyframes namereveal {
+  80% {left: calc(50% - 170px);}
+  85% {left: calc(50% + 170px);}
+  100% {left: calc(50% + 170px);}
+}
+
+@keyframes starfield {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 2000px 0px, 800px 0px, 300px 0px;}
+}
